@@ -1,3 +1,11 @@
+/********************************
+Nikolas Praseutsinh
+Computer Science Fall 2026
+Due: September 15, 2026
+Lab 2: Exploring Output
+Calculate the volume and surface area of the cylinder and output radius, height, volume and surface area of the cylinder.
+*********************************/
+
 #include <iostream>
 //Function to calculate Volume of a cylinder using radius and height
 float calculateVolume(float r, float h) {
