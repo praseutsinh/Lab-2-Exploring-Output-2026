@@ -7,29 +7,31 @@ Calculate the volume and surface area of the cylinder and output radius, height,
 *********************************/
 
 #include <iostream>
-//Function to calculate Volume of a cylinder using radius and height
-float calculateVolume(float r, float h) {
-	return 3.14159 * r * r * h;
 
-}
-//Function to calculate surface area of a cylinder using radius and height
-
-float calculateSurfaceArea(float r, float h) {
-	return 2 * 3.14159 * r * (r + h);
-}
+//Function prototypes
+float calculateVolume(float r, float h , float pi);
+float calculateSurfaceArea(float r, float h, float pi);
 
 int main() {
 	//Define the radius and height of the cylinder
 	float radius = 10;
 	float height = 5;
-
+	const float pi = 3.14159;
 
 	//Output the results to the console
 	std::cout << "Radius: " << radius << "\n";
 	std::cout << "Height: " << height << "\n";
-	std::cout << "Volume: " << calculateVolume(radius, height) << "\n";
-	std::cout << "Surface Area: " << calculateSurfaceArea(radius, height) << "\n";
+	std::cout << "Volume: " << calculateVolume(radius, height, pi) << "\n";
+	std::cout << "Surface Area: " << calculateSurfaceArea(radius, height, pi) << "\n";
 
 	return 0;
-	//Finished 9/1/2026 10:11 AM
+}
+//Function to calculate volume of a cylinder using radius and height
+float calculateVolume(float r, float h , float pi) {
+	return pi * r * r * h;
+}
+
+// Function to calculate surface area of a cylinder using radius and height
+float calculateSurfaceArea(float r, float h, float pi) {
+	return 2 * pi * r * (r + h);
 }
